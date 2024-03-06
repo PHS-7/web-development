@@ -28,7 +28,7 @@ import React from "react";
 // 03: Arrow function sem retorno
 
 const MeusDados = () => <div>
-    <h1 style={{fontFamily: "monospace"}}>Nome: Pedro Henrique & Vitor Loula</h1>
+    <h1>Nome: Pedro Henrique & Vitor Loula</h1>
     <h1>Curso: Engenharia de Software</h1>
     <h1>Universidade: UFC - <i>Campus</i> Quixadá</h1>
 
