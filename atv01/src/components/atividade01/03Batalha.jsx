@@ -25,9 +25,11 @@ function Arena() {
         </div>
     );
 }
-function World({ children }) {
+function World(props) {
     return (
-        <Arena></Arena>
+        <>
+            {props.children}
+        </>
     )
 }
 export { Arena, Hero, Enemy, World }
