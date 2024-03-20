@@ -3,6 +3,8 @@ import * as PC from './components/atividade01/02MeuPC';
 import { Hero, Enemy, Arena, World } from './components/atividade01/03Batalha'
 function App() {
   return (
+    <>
+    <h1>Pedro Henrique Santos - 536925</h1>
     <div>
       <World>
         <Arena></Arena>
@@ -10,6 +12,7 @@ function App() {
         <Arena></Arena>
       </World>
     </div>
+    </>
   );
 
 }
