@@ -1,24 +1,34 @@
-const PlacaMae = ({ nome, preco }){
+const PlacaMae = ({ nome, preco }) => {
     return (
-        <h3>Nome: {nome}</h3>
-        <h3>Preço: {preco}</h3>
+        <div>
+            <h1>Placa Mãe</h1>
+            <h3>Nome: {nome}</h3>
+            <h3>Preço: {preco}</h3>
+        </div>
     );
 }
 
-const Memoria = ({ nome, preco }){
+const Memoria = ({ nome, preco })=>{
     return (
-        <h3>Nome: {nome}</h3>
-        <h3>Preço: {preco}</h3>
+        <div>
+            <h1>Memoria</h1>
+            <h3>Nome: {nome}</h3>
+            <h3>Preço: {preco}</h3>
+        </div>
     );
 }
 
-const PlacaDeVideo = ({ nome, preco }){
+const PlacaDeVideo = ({ nome, preco })=>{
     return (
-        <h3>Nome: {nome}</h3>
-        <h3>Preço: {preco}</h3>
+        <div>
+            <h1>Placa de Video</h1>
+            <h3>Nome: {nome}</h3>
+            <h3>Preço: {preco}</h3>
+        </div>
     );
 }
 
-export {
-    PlacaMae, Memoria, PlacaDeVideo
-}
+export { 
+    PlacaMae, 
+    Memoria, 
+    PlacaDeVideo }
