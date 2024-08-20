@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react"
 
 const Questao04 = () => {
-
-    const [maior, setMaior] = useState(0)
-    const [menor, setMenor] = useState(0)
-
+    const [data, setData] = useState([])
     const receberDados = new Promise(resolve => {
         resolve(
             [
@@ -14,11 +11,28 @@ const Questao04 = () => {
             ]
         )
     })
+    useEffect(
+        () => {
+            receberDados.then(
+                data => setData(data)
+            )
+        }, []
+    )
+    function imprimir() {
+        const populacoes = data.map(i => i.population)
+        const max = Math.max(...populacoes)
+        const min = Math.min(...populacoes)
+        return data.filter(i => i.population === max || i.population === min).map(e=>
+            <div>
+                <p>capital: {e.capital}</p>
+                <p>População: {e.population}</p>
+            </div>
+        )
+    }
     return (
         <>
             <h1>Questão </h1>
-            <h3>População: </h3>
-            <p>Maior: {maior}           Menor: {menor}</p>
+            {imprimir()}
         </>
     )
 }
