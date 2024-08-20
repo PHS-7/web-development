@@ -1,0 +1,35 @@
+O uso de Contextos é útil para evitar problemas de props driling pois evita que a repetição e confusão na comunicação que ocorre entre pais e filhos, 
+pois agora o pode-se dizer quem realmente precisa acessar determinada proprieda(deixando de necessitar daquele telefone sem fio infinto que um passa pra outro q passa pra outro e assim vai)
+
+import React from 'react';
+
+// Componente de nível mais alto
+function A() {
+  const variavel = 'variavel de A';
+
+  return (
+    <div>
+      <B variavel={variavel} />
+    </div>
+  );
+}
+
+// Componente B
+function B({ variavelDeA }) {
+  return (
+    <div>
+      <C variavelDeA={variavelDeA} />
+    </div>
+  );
+}
+
+// Componente C
+function C({ variavelDeA }) {
+  return (
+    <h2>{variavelDeA}</h2>
+  )
+}
+
+
+Com Contexto isso fica enxuto pois eh feito uso do Provider e as propridade só são passadas a quem tem interesse
+export default A;
